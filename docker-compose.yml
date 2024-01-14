@@ -1,7 +1,10 @@
 services:
-  app:
+  spectro:
     build: .
-    container_name: spectrogram_network
+    container_name: spectro
     command: /bin/zsh
     volumes:
-      - ./spectrogram_network
+      - .:/spectrogram_network
+    ports:
+      - "8787:8787"  # Expose Dask dashboard (default port 8787)
+      - "8786:8786"  # Expose Dask scheduler port (if needed)

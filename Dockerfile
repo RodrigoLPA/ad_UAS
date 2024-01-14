@@ -14,7 +14,7 @@ RUN mkdir -pv /spectrogram_network/models
 
 WORKDIR /spectrogram_network/
 ADD requirements.txt /spectrogram_network/
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # good for the final paper container
 #ADD src /local/src
