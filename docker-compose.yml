@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    container_name: spectrogram_network
+    command: /bin/zsh
+    volumes:
+      - ./spectrogram_network
