@@ -1,19 +1,19 @@
 FROM ml
 
 
-RUN mkdir -pv /spectrogram_network/src
-RUN mkdir -pv /spectrogram_network/data
-RUN mkdir -pv /spectrogram_network/notebooks
-RUN mkdir -pv /spectrogram_network/artifacts
-RUN mkdir -pv /spectrogram_network/models
+RUN mkdir -pv /nids/src
+RUN mkdir -pv /nids/data
+RUN mkdir -pv /nids/notebooks
+RUN mkdir -pv /nids/artifacts
+RUN mkdir -pv /nids/models
 
 # Where computed results and plots can go
 # When should we use VOLUME?
 #VOLUME /local/artifacts
 
 
-WORKDIR /spectrogram_network/
-ADD requirements.txt /spectrogram_network/
+WORKDIR /nids/
+ADD requirements.txt /nids/
 RUN pip3 install -r requirements.txt
 
 # good for the final paper container
@@ -21,6 +21,6 @@ RUN pip3 install -r requirements.txt
 #ADD notebooks /local/notebooks
 # for developping it's better to just mount the volumes anonymously. See docker ressources for a better exp.
 
-ENV PYTHONPATH=/spectrogram_network/src
+ENV PYTHONPATH=/nids/src
 
 ENTRYPOINT [ "/bin/zsh" ]

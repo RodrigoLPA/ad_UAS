@@ -4,22 +4,14 @@
 
 - Intrusion Detection Systems (IDSs) and Intrusion Prevention Systems (IPSs) are crucial for defending against network attacks.
 
-## The Dataset
-
-## About Dataset
-
-### Overview
-
 - Unlike the commonly-used [KDDCUP99 outlier detection dataset](https://odds.cs.stonybrook.edu/smtp-kddcup99-dataset/), this dataset contains both benign and updated attack data, mimicking real-world scenarios, with an emphasis on generating realistic background traffic using the B-Profile system.
   
 - It includes network traffic analysis results with labeled flows and feature definitions.
 - It profiles the behavior of 25 users across various protocols like HTTP, HTTPS, FTP, SSH, and email.
 
-### Data Capturing Details
-
-- Data captured from July 3 to July 7, 2017, including benign traffic and various attacks (e.g., Brute Force, DoS, Heartbleed, Web Attack, Infiltration, Botnet, DDoS).
-
 ### Key Dataset Features
+
+The data was captured from July 3 to July 7, 2017, including benign traffic and various attacks (e.g., Brute Force, DoS, Heartbleed, Web Attack, Infiltration, Botnet, DDoS).
 
 1. **Complete Network Configuration**: Includes diverse OS and network devices.
 2. **Complete Traffic**: Involves a user profiling agent and different machines for victim and attack networks.
